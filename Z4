@@ -1,0 +1,11 @@
+data = [("Москва", 2020, 12_000_000),
+    ("Санкт-Петербург", 2020, 5_400_000),
+    ("Москва", 2021, 12_200_000),
+    ("Санкт-Петербург", 2021, 5_350_000)]
+
+city_populations = {}
+for city, _, population in data:
+    city_populations[city] = city_populations.get(city, 0) + population
+
+for city, population in city_populations.items():
+    print(f"{city}: {population}")
